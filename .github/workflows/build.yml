@@ -134,11 +134,11 @@ jobs:
           cmake .. -DCMAKE_BUILD_TYPE=$BUILD_TYPE
 
       - name: Build
-        working-directory: build
+        #working-directory: build
         shell: bash
         # Execute the build.  You can specify a specific target with "--target <NAME>"
         run: |
-          cmake --build . --config $BUILD_TYPE
+          source openfpga.sh && cmake --build build --config $BUILD_TYPE
 
       # Check the cache size and see if it is over the limit
       - name: Check ccache size
@@ -157,12 +157,12 @@ jobs:
             openfpga/openfpga
             vpr/libvpr.a
             vpr/vpr
-            yosys/share/
-            yosys/yosys
-            yosys/yosys-abc
-            yosys/yosys-config
-            yosys/yosys-filterlib
-            yosys/yosys-smtbmc
+            yosys/install/share/
+            yosys/install/bin/yosys
+            yosys/install/bin/yosys-abc
+            yosys/install/bin/yosys-config
+            yosys/install/bin/yosys-filterlib
+            yosys/install/bin/yosys-smtbmc
             openfpga_flow
             openfpga.sh
   docker_distribution:
@@ -227,11 +227,11 @@ jobs:
           chmod +x ace2/ace
           chmod +x openfpga/openfpga
           chmod +x vpr/vpr
-          chmod +x yosys/yosys
-          chmod +x yosys/yosys-abc
-          chmod +x yosys/yosys-config
-          chmod +x yosys/yosys-filterlib
-          chmod +x yosys/yosys-smtbmc
+          chmod +x yosys/install/bin/yosys
+          chmod +x yosys/install/bin/yosys-abc
+          chmod +x yosys/install/bin/yosys-config
+          chmod +x yosys/install/bin/yosys-filterlib
+          chmod +x yosys/install/bin/yosys-smtbmc
       - name: ${{matrix.config.name}}_GCC-8_(Ubuntu 18.04)
         shell: bash
         run: source openfpga.sh && source openfpga_flow/regression_test_scripts/${{matrix.config.name}}.sh

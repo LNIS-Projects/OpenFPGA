@@ -3,7 +3,7 @@ RUN mkdir -p /opt/openfpga
 WORKDIR /opt/openfpga
 COPY . /opt/openfpga
 RUN chmod +x abc/abc ace2/ace openfpga/openfpga vpr/vpr
-RUN chmod +x yosys/yosys yosys/yosys-abc yosys/yosys-config yosys/yosys-filterlib yosys/yosys-smtbmc
-ENV PATH="/opt/openfpga/openfpga:/opt/openfpga/yosys:${PATH}"
+RUN chmod +x yosys/install/bin/yosys yosys/install/bin/yosys-abc yosys/install/bin/yosys-config yosys/install/bin/yosys-filterlib yosys/install/bin/yosys-smtbmc
+ENV PATH="/opt/openfpga/openfpga:/opt/openfpga/yosys/install/bin:${PATH}"
 ENV PATH="/opt/openfpga/ace2:/opt/openfpga/abc:/opt/openfpga/vpr:${PATH}"
 ENV OPENFPGA_PATH="/opt/openfpga"

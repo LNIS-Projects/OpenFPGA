@@ -1,4 +1,7 @@
 [submodule "yosys"]
 	path = yosys
-	url = https://github.com/QuickLogic-Corp/yosys.git
-	branch = quicklogic-rebased
+	url = https://github.com/SymbiFlow/yosys.git
+	branch = master+wip
+[submodule "yosys-plugins"]
+	path = yosys-plugins
+	url = https://github.com/SymbiFlow/yosys-symbiflow-plugins.git

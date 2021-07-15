@@ -25,6 +25,7 @@ It also includes detailed information about docker image.
 ```bash
 # Clone the repository and go inside it
 git clone https://github.com/LNIS-Projects/OpenFPGA.git && cd OpenFPGA
+source openfpga.sh
 make all
 ```
 

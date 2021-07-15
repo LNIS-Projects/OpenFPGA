@@ -16,6 +16,10 @@ export OPENFPGA_SCRIPT_PATH="${OPENFPGA_PATH}/openfpga_flow/scripts"
 export OPENFPGA_TASK_PATH="${OPENFPGA_PATH}/openfpga_flow/tasks"
 if [ -z $PYTHON_EXEC ]; then export PYTHON_EXEC="python3"; fi
 
+# Add yosys bin folder in PATH, this is required by yosys-plugins 
+# to install plugins in yosys folder
+export PATH="${OPENFPGA_PATH}/yosys/install/bin:${PATH}"
+
 # This function checks the path and
 # raises warning if the command is not executing
 # inside current OpendFPGA folder

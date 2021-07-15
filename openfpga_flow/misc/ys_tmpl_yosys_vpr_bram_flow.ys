@@ -67,9 +67,9 @@ opt_expr -mux_undef
 simplemap
 opt_expr
 opt_merge
-opt_rmdff
 opt_clean
 opt
+dfflegalize -cell $_DFF_?_ 01 -cell $_DFF_?P?_ r -cell $_SDFF_?P?_ r
 
 #########################
 # Map LUTs

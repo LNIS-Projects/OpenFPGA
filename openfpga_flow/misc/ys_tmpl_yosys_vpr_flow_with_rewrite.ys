@@ -11,6 +11,9 @@ techmap -D NO_LUT -map +/adff2dff.v
 synth -top ${TOP_MODULE} -flatten
 clean
 
+# Map flip-flops
+dfflegalize -cell $_DFF_P_ 0 -cell $_DFF_P??_ 0 -cell $_DFF_N_ 0 -cell $_DFF_N??_ 0
+
 # LUT mapping
 abc -lut ${LUT_SIZE}
 
