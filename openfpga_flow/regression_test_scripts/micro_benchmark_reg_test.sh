@@ -17,3 +17,5 @@ run-task benchmark_sweep/mcnc_big20 --debug --show_thread_logs
 #python3 openfpga_flow/scripts/run_modelsim.py mcnc_big20 --run_sim
 
 run-task benchmark_sweep/signal_gen --debug --show_thread_logs
+
+# run-task benchmark_sweep/processor --debug --show_thread_logs

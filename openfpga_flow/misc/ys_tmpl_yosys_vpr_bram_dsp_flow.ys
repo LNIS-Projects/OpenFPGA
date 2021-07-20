@@ -76,6 +76,11 @@ memory_map
 opt -undriven -fine
 
 #########################
+# Map muxes to pmuxes
+#########################
+techmap -map +/pmux2mux.v
+
+#########################
 # Map flip-flops
 #########################
 techmap -map +/adff2dff.v
