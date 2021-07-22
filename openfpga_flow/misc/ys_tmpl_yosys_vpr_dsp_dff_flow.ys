@@ -66,14 +66,6 @@ opt -fast
 memory -nomap
 opt_clean
 
-#########################
-# Map logics to BRAMs
-#########################
-memory_bram -rules ${YOSYS_BRAM_MAP_RULES}
-techmap -map ${YOSYS_BRAM_MAP_VERILOG}
-opt -fast -mux_undef -undriven -fine
-memory_map
-opt -undriven -fine
 
 #########################
 # Map muxes to pmuxes
